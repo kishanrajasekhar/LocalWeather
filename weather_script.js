@@ -47,9 +47,17 @@ $(document).ready(function() {
                     console.log(json);
                     var weather_description = json.weather[0].main;
                     var kelvins = json.main.temp;    
+					var pressure = json.main.pressure;
+					var humidity = json.main.humidity;
+					var wind_speed = json.wind.speed;
+					var icon_url = 'http://openweathermap.org/img/w/' + json.weather[0].icon + '.png';
 					temperature = kelvinToFarenheit(kelvins); // set to farenheit by default	
                     $('#description').html('Weather: ' + weather_description);
 					$('#temperature').html('Temperature: ' + Math.round(temperature, 2) + ' <span id="toggle_temp" onclick="toggleTemperature()">F</span>');
+					$('#pressure').html('Pressure: ' + pressure + ' hPa');
+					$('#humidity').html('Humidity ' + humidity + '%');
+					$('#wind_speed').html('Wind speed ' + wind_speed + ' m/s');
+					$('#weather_icon').html('<img src="'+icon_url+'">');
                 });
             });         
         });
