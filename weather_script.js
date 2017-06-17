@@ -50,8 +50,11 @@ $(document).ready(function() {
 					var pressure = json.main.pressure;
 					var humidity = json.main.humidity;
 					var wind_speed = json.wind.speed;
-					var icon_url = 'http://openweathermap.org/img/w/' + json.weather[0].icon + '.png';
+					var icon_name = json.weather[0].icon;
+					console.log('icon is '+ icon_name);
+					var icon_url = 'http://openweathermap.org/img/w/' + icon_name + '.png';
 					temperature = kelvinToFarenheit(kelvins); // set to farenheit by default	
+					$('body').css('background-image', 'url("img/' + icon_name + '.jpg")');
                     $('#description').html('Weather: ' + weather_description);
 					$('#temperature').html('Temperature: ' + Math.round(temperature, 2) + ' <span id="toggle_temp" onclick="toggleTemperature()">F</span>');
 					$('#pressure').html('Pressure: ' + pressure + ' hPa');

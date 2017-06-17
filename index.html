@@ -13,6 +13,11 @@
 <body>  
 
 <style>
+	body {
+		background-size:     cover;                      /* <------ */
+		background-repeat:   no-repeat;
+		background-position: center center;              /* optional, center the image */
+	}
 	#toggle_temp{
 		color: blue;
 		cursor: pointer;
@@ -24,11 +29,11 @@
         <h1>Local Weather App</h1>
     </div>
     <h2><div id="city">
-        San Jose
+        
     </div></h2>
-    <h3><div id="description">Weather: Clear</div></h3>
-    <h3><div id="temperature">Temperature:68 <span id="toggle_temp" onclick="toggleTemperature()">F</span></div></h3>
-    <div id="weather_icon"><img src="img/tempIcon.PNG"></div><br>
+    <h3><div id="description"></div></h3>
+    <h3><div id="temperature"> <span id="toggle_temp" onclick="toggleTemperature()"></span></div></h3>
+    <div id="weather_icon"></div><br>
     <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#extra">More Info</button>
     <h4><div id="extra" class="collapse">
         <div id="pressure">Pressure: 1021 hPa</div><br>
