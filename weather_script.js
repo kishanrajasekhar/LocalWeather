@@ -1,6 +1,6 @@
 // api key is 3a56643830a757e248ecaf41d73c15fa
-var weatherAPI = 'http://api.openweathermap.org/data/2.5/weather?appid=3a56643830a757e248ecaf41d73c15fa';
-var googleAPI = "http://maps.googleapis.com/maps/api/geocode/json?sensor=true";
+var weatherAPI = 'https://api.openweathermap.org/data/2.5/weather?appid=3a56643830a757e248ecaf41d73c15fa';
+var googleAPI = "https://maps.googleapis.com/maps/api/geocode/json?sensor=true";
 var test = 'San Jose'.replace(' ', '%20');
 var isCelcius = false;
 var temperature = 68;
